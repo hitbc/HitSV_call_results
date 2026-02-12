@@ -1,7 +1,7 @@
 # HitSV: Maximizing discovery of structural variants across sequencing technologies
 
 ## 项目说明
-该项目存储了HitSV工具的在HG002与千人基因组上的变异检测结果。
+该项目存储了HitSV工具的在HG002/3/4/5/6/7与千人基因组上的变异检测结果。
 
 工具所在的github位置
 https://github.com/hitbc/HitSV
