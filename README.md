@@ -1,12 +1,13 @@
 # HitSV: Maximizing discovery of structural variants across sequencing technologies
 
-## HitSV Software, Source Code, and Demo Data
-
 https://github.com/hitbc/HitSV
 
 ## HitSV LRS Structural Variant Detection Results
 
 https://github.com/hitbc/HitSV_call_results/tree/main/LRS_HG002_single_sample
+
+
+
 
 HG002 LRS dataset: down-sample to: 1x, 2x, 3x, 4x, 5x, 6x, 7x, 8x, 9x, 10x, 15x, 20x, 25x, 30x.
 The results has been randomly pseudo-phased; and includes small variant data around SVs.
