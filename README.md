@@ -72,6 +72,16 @@ HitSV variant calling results (ONT + Illumina hybrid and CCS + Illumina hybrid, 
 https://github.com/hitbc/HitSV_call_results/HG002-Hybrid/HYBRID_ILL.30X.ont.4X.vcf.gz
 https://github.com/hitbc/HitSV_call_results/HG002-Hybrid/HYBRID_ILL.30X.ccs.4X.vcf.gz
 
+## EASY and HARD Regions for Benchmarking
+
+### The data source for the HARD regions is:
+
+https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/release/genome-stratifications/v3.3/GRCh38@all/Union/GRCh38_alldifficultregions.bed.gz
+
+### The data source for the EASY regions is:
+
+https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/release/genome-stratifications/v3.3/GRCh38@all/Union/GRCh38_notinalldifficultregions.bed.gz
+
 ## 1000 Genomes Project (3,202 Samples) HitSV Calls
 
 ### Single-Sample Variant Calling
