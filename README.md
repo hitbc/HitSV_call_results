@@ -43,7 +43,7 @@ s3://ont-open-data/giab_2025.01/basecalling/sup/HG006/PAY77227/calls.sorted.bam
 s3://ont-open-data/giab_2025.01/basecalling/sup/HG007/PAY12990/calls.sorted.bam
 
 HitSV variant calling results:
-https://github.com/hitbc/HitSV_call_results/LRS-TRIO/sup_HG00*.vcf.gz
+https://github.com/hitbc/HitSV_call_results/LRS-TRIO/HG00*.vcf.gz
 
 ## HitSV SRS SV Detection Information
 
@@ -53,7 +53,7 @@ Original data source:
 https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/data/AshkenazimTrio/HG002_NA24385_son/NIST_HiSeq_HG002_Homogeneity-10953946/NHGRI_Illumina300X_AJtrio_novoalign_bams/HG002.hs37d5.60x.1.bam
 
 HitSV variant calling results:
-https://github.com/hitbc/HitSV_call_results/HG002-SRS/ILL_60X.vcf.gz
+https://github.com/hitbc/HitSV_call_results/HG002/HG002-SRS/ILL_60X.vcf.gz
 
 ### HG002 SRS 35× Dataset
 
@@ -61,7 +61,7 @@ Original data source:
 https://opendata.nist.gov/pdrsrv/mds2-2336/input_fastqs/HG002.novaseq.pcr-free.35x.R1.fastq.gz
 
 HitSV variant calling results:
-https://github.com/hitbc/HitSV_call_results/HG002-SRS/ILL_35X.vcf.gz
+https://github.com/hitbc/HitSV_call_results/HG002/HG002-SRS/ILL_35X.vcf.gz
 
 ## HitSV Hybrid SV Detection Information
 
@@ -69,8 +69,52 @@ Original data sources:
 See the sections above.
 
 HitSV variant calling results (ONT + Illumina hybrid and CCS + Illumina hybrid, respectively):
-https://github.com/hitbc/HitSV_call_results/HG002-Hybrid/HYBRID_ILL.30X.ont.4X.vcf.gz
-https://github.com/hitbc/HitSV_call_results/HG002-Hybrid/HYBRID_ILL.30X.ccs.4X.vcf.gz
+https://github.com/hitbc/HitSV_call_results/HG002/HG002-Hybrid/HG002*.vcf.gz
+
+
+## HGSVC Dataset HitSV Calls
+
+The HGSVC (Human Genome Structural Variation Consortium) dataset contains long-read sequencing data for five individuals (HG00096, HG00268, HG00358, HG00512, HG00731). All variant calling was performed based on the GRCh38 reference genome. All datasets are at 30× coverage and results have been locally phased.
+
+Original data source:
+https://github.com/human-pangenomics/HG002_Data_Freeze_v1.0
+
+HitSV LRS variant calling results (HiFi and ONT, respectively):
+https://github.com/hitbc/HitSV_call_results/HGSVC/HGSVC-LRS/*_HiFi30X_asm5.vcf.gz
+https://github.com/hitbc/HitSV_call_results/HGSVC/HGSVC-LRS/*_ONT30X_asm5.vcf.gz
+
+## Multi-species Dataset HitSV Calls
+
+HitSV was applied to multiple model organisms across different sequencing platforms (LRS only, SRS only, and hybrid) to demonstrate cross-species applicability. The species included are: Arabidopsis thaliana, Danio rerio, Drosophila melanogaster, Macaca fascicularis, and Mus musculus.
+
+### Original Data Sources
+
+The following table summarizes the reference genomes, T2T assemblies, and sequencing reads used for each species:
+
+| Species | Reference Genome | T2T Assembly | Sequencing Reads |
+|---------|-----------------|--------------|-----------------|
+| *Macaca fascicularis* (Crab-eating macaque) | [GCA_011100615.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_011100615.1/) | [GCF_037993035.2](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_037993035.2/) | PacBio HiFi / Nanopore / Illumina — [BioProject 1037719](https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=1037719) |
+| *Mus musculus* (Mouse) | [GCF_000001635.27](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001635.27/) | [mhaESC\_genome v1.1.0](https://github.com/yulab-ql/mhaESC_genome/releases/download/upd_rmvector/mouse.241018.v1.1.0.combined.fasta.gz) | PacBio HiFi / Nanopore / Illumina — [SAMN40876533](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SAMN40876533&o=acc_s%3Aa) |
+| *Drosophila melanogaster* (Fruit fly) | [GCF_000001215.4](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001215.4/) | [PRJNA1237537](https://www.ncbi.nlm.nih.gov/datasets/genome/?bioproject=PRJNA1237537) | PacBio HiFi / Nanopore / DNBSEQ — [BioProject 1237537](https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=1237537) |
+| *Danio rerio* (Zebrafish) | [GCF_049306965.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_049306965.1/) | [GCA_052040795.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_052040795.1/) | PacBio HiFi / Nanopore — [BioProject 1299309](https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=1299309) |
+| *Arabidopsis thaliana* (Thale cress) | [GCF_000001735.4](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001735.4/) | [32 ecotypes pan-genome](https://figshare.com/articles/dataset/32_ecotypes_Arabidopsis_thaliana_genomes_gene_annotation_pan-TE_library_graph_pan-genome_gene_family_and_gene_presence_absence_matrices_files_/21673895) | Nanopore: [ERR11436642](ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR114/ERR11436642/Nanopore_Kz-9.fastq.gz) · PacBio HiFi: [CRR591671](https://ngdc.cncb.ac.cn/gsa/browse/CRA008584/CRR591671) · Illumina: [ERR11436063](ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR114/ERR11436063/Illumina_Kz-9_R1.fastq.gz) |
+
+### LRS (Long Read Sequencing)
+
+HitSV variant calling results (HiFi and ONT, respectively, for each species):
+https://github.com/hitbc/HitSV_call_results/Multi_species/*-LRS/*_HiFi_asm10.vcf.gz
+https://github.com/hitbc/HitSV_call_results/Multi_species/*-LRS/*_ONT_asm10.vcf.gz
+
+### SRS (Short Read Sequencing)
+
+HitSV variant calling results:
+https://github.com/hitbc/HitSV_call_results/Multi_species/*-SRS/*_SRS_asm10.vcf.gz
+
+### Hybrid (LRS + SRS)
+
+HitSV variant calling results (HiFi + Illumina hybrid and ONT + Illumina hybrid, respectively, for each species):
+https://github.com/hitbc/HitSV_call_results/Multi_species/*-Hybrid/*_HiFi4X_SRS30X_asm10.vcf.gz
+https://github.com/hitbc/HitSV_call_results/Multi_species/*-Hybrid/*_ONT4X_SRS30X_asm10.vcf.gz
 
 ## EASY and HARD Regions for Benchmarking
 
@@ -115,3 +159,10 @@ The columns represent: chromosome ID (0-based), start position of the variant, v
 
 Results:
 https://github.com/hitbc/HitSV_call_results/blob/main/1KGP_3202_samples_gcSV_v1.0_grch38_VNTR_ANALYSIS.txt.gz
+
+
+Alignment | Coordinates | Strand | Length | Notes 
+-- | -- | -- | -- | -- 
+1 | 93,581,722 – 93,582,629 | + | 908 bp | Upstream reference-aligned sequence 
+2 | 93,582,644 – 93,583,540 | − | 898 bp | Inverted segment 
+3 | 93,586,335 – 93,596,411 | + | 10,077 bp | Downstream sequence after a ~2.8kb gap/deletion

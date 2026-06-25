@@ -63,9 +63,51 @@ HitSV的变异检测结果：
 参阅上文。
 
 HitSV的变异检测结果【分别是 ONT与Illumina的混合以及CCS与Illumina的混合】：
+https://github.com/hitbc/HitSV_call_results/HG002/HG002-Hybrid/HG002*.vcf.gz
 
-[/home/fenghe/vscode/HitSV_call_results](https://github.com/hitbc/HitSV_call_results)/HG002-Hybrid/HYBRID_ILL.30X.ont.4X.vcf.gz
-[/home/fenghe/vscode/HitSV_call_results](https://github.com/hitbc/HitSV_call_results)/HG002-Hybrid/HYBRID_ILL.30X.ccs.4X.vcf.gz
+## HGSVC 数据集 HitSV 检测结果
+
+HGSVC（Human Genome Structural Variation Consortium）数据集包含五个个体（HG00096、HG00268、HG00358、HG00512、HG00731）的长读长测序数据。所有变异检测均基于 GRCh38 参考基因组。所有数据均为 30× 覆盖度，结果均经过局部定相。
+
+数据的原始来源：
+https://github.com/human-pangenomics/HG002_Data_Freeze_v1.0
+
+HitSV LRS 变异检测结果（分别为 HiFi 和 ONT）：
+https://github.com/hitbc/HitSV_call_results/HGSVC/HGSVC-LRS/*_HiFi30X_asm5.vcf.gz
+https://github.com/hitbc/HitSV_call_results/HGSVC/HGSVC-LRS/*_ONT30X_asm5.vcf.gz
+
+## 多物种数据集 HitSV 检测结果
+
+HitSV 被应用于多种模式生物，涵盖不同测序平台（仅 LRS、仅 SRS，以及混合平台），以展示跨物种的适用性。涉及的物种包括：拟南芥（Arabidopsis thaliana）、斑马鱼（Danio rerio）、黑腹果蝇（Drosophila melanogaster）、食蟹猴（Macaca fascicularis）和小鼠（Mus musculus）。
+
+### 原始数据来源
+
+下表汇总了每个物种所使用的参考基因组、T2T 组装以及测序 reads：
+
+| 物种 | 参考基因组 | T2T 组装 | 测序 Reads |
+|------|-----------|----------|-----------|
+| 食蟹猴 *Macaca fascicularis* | [GCA_011100615.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_011100615.1/) | [GCF_037993035.2](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_037993035.2/) | PacBio HiFi / Nanopore / Illumina — [BioProject 1037719](https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=1037719) |
+| 小鼠 *Mus musculus* | [GCF_000001635.27](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001635.27/) | [mhaESC\_genome v1.1.0](https://github.com/yulab-ql/mhaESC_genome/releases/download/upd_rmvector/mouse.241018.v1.1.0.combined.fasta.gz) | PacBio HiFi / Nanopore / Illumina — [SAMN40876533](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SAMN40876533&o=acc_s%3Aa) |
+| 黑腹果蝇 *Drosophila melanogaster* | [GCF_000001215.4](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001215.4/) | [PRJNA1237537](https://www.ncbi.nlm.nih.gov/datasets/genome/?bioproject=PRJNA1237537) | PacBio HiFi / Nanopore / DNBSEQ — [BioProject 1237537](https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=1237537) |
+| 斑马鱼 *Danio rerio* | [GCF_049306965.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_049306965.1/) | [GCA_052040795.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_052040795.1/) | PacBio HiFi / Nanopore — [BioProject 1299309](https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=1299309) |
+| 拟南芥 *Arabidopsis thaliana* | [GCF_000001735.4](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001735.4/) | [32 生态型泛基因组](https://figshare.com/articles/dataset/32_ecotypes_Arabidopsis_thaliana_genomes_gene_annotation_pan-TE_library_graph_pan-genome_gene_family_and_gene_presence_absence_matrices_files_/21673895) | Nanopore: [ERR11436642](ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR114/ERR11436642/Nanopore_Kz-9.fastq.gz) · PacBio HiFi: [CRR591671](https://ngdc.cncb.ac.cn/gsa/browse/CRA008584/CRR591671) · Illumina: [ERR11436063](ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR114/ERR11436063/Illumina_Kz-9_R1.fastq.gz) |
+
+### LRS（长读长测序）
+
+HitSV 变异检测结果（每个物种分别为 HiFi 和 ONT）：
+https://github.com/hitbc/HitSV_call_results/Multi_species/*-LRS/*_HiFi_asm10.vcf.gz
+https://github.com/hitbc/HitSV_call_results/Multi_species/*-LRS/*_ONT_asm10.vcf.gz
+
+### SRS（短读长测序）
+
+HitSV 变异检测结果：
+https://github.com/hitbc/HitSV_call_results/Multi_species/*-SRS/*_SRS_asm10.vcf.gz
+
+### 混合（LRS + SRS）
+
+HitSV 变异检测结果（每个物种分别为 HiFi+Illumina 混合 和 ONT+Illumina 混合）：
+https://github.com/hitbc/HitSV_call_results/Multi_species/*-Hybrid/*_HiFi4X_SRS30X_asm10.vcf.gz
+https://github.com/hitbc/HitSV_call_results/Multi_species/*-Hybrid/*_ONT4X_SRS30X_asm10.vcf.gz
 
 ## 1000 Genomes Project 3,202 HitSV-call
 
@@ -91,4 +133,3 @@ https://github.com/hitbc/HitSV_call_results/blob/main/1KGP_3202_samples_gcSV_v1.
 不以 `VNTR_REGION` 开头的行：每行描述一个位于特定简单重复区域内的结构变异（SV）。列代表：染色体 ID（0-based）、变异的起始位置、变异长度、REF、ALT 以及不同超人群中的等位基因计数（AC）。
 结果：
 https://github.com/hitbc/HitSV_call_results/blob/main/1KGP_3202_samples_gcSV_v1.0_grch38_VNTR_ANALYSIS.txt.gz
-
