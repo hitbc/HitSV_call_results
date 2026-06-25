@@ -80,16 +80,18 @@ https://github.com/hitbc/HitSV_call_results/HG002/HG002-Hybrid/HG002*.vcf.gz
 
 The HGSVC (Human Genome Structural Variation Consortium) dataset contains long-read sequencing data for five individuals (HG00096, HG00268, HG00358, HG00512, HG00731). All variant calling was performed based on the GRCh38 reference genome. All datasets are at 30× coverage and results have been locally phased.
 
-Original data source:
-https://github.com/human-pangenomics/HG002_Data_Freeze_v1.0
+| Data Type | Data Source |
+|--------|-------------|
+| PacBio HiFi reads	 | ` https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections//HGSVC3/working/20250307_Alignments_HiFi_T2T/` |
+| Nanopore long reads  | `https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections//HGSVC3/working/20240816_JAX_ONT_guppy6_Rebasecalled/` |
 
 HitSV LRS variant calling results (HiFi and ONT, respectively):
 https://github.com/hitbc/HitSV_call_results/HGSVC/HGSVC-LRS/*_HiFi30X_asm5.vcf.gz
 https://github.com/hitbc/HitSV_call_results/HGSVC/HGSVC-LRS/*_ONT30X_asm5.vcf.gz
 
-## species Dataset HitSV Calls
+## non‑human species Dataset HitSV Calls
 
-HitSV was applied to multiple model organisms across different sequencing platforms (LRS only, SRS only, and hybrid) to demonstrate cross-species applicability. The species included are: Arabidopsis thaliana, Danio rerio, Drosophila melanogaster, Macaca fascicularis, and Mus musculus.
+HitSV was applied to several non‑human species datasets across different sequencing platforms (LRS only, SRS only, and hybrid) to demonstrate cross-species applicability. The species included are: Arabidopsis thaliana, Danio rerio, Drosophila melanogaster, Macaca fascicularis, and Mus musculus.
 
 ### Original Data Sources
 
@@ -119,7 +121,7 @@ HitSV variant calling results (HiFi + Illumina hybrid and ONT + Illumina hybrid,
 https://github.com/hitbc/HitSV_call_results/Multi_species/*-Hybrid/*_HiFi4X_SRS30X_asm10.vcf.gz
 https://github.com/hitbc/HitSV_call_results/Multi_species/*-Hybrid/*_ONT4X_SRS30X_asm10.vcf.gz
 
-## EASY and HARD Regions for Benchmarking
+## EASY and HARD Regions (GRCh38) for Benchmarking
 
 ### The data source for the HARD regions is:
 
@@ -147,25 +149,3 @@ Same as above.
 
 Variant calling results (stored separately by chromosome):
 https://github.com/hitbc/HitSV_call_results/blob/main/1KGP_3202_samples_gcSV_v1.0_grch38_SURVIVOR_merge/1KGP_3202_samples_gcSV_v1.0_grch38_SURVIVOR_merge_sort_chr*.vcf.gz
-
-### 1000 Genomes Project VNTR Analysis: SVs in Simple Repeat Regions
-
-Description:
-
-Lines starting with `VNTR_REGION`: 
-Each line describes a simple repeat region based on Repeat Masker. 
-The columns represent: chromosome ID (0-based), start and end positions of the region, annotation type, and repeat unit.
-
-Lines not starting with `VNTR_REGION`: 
-Each line describes a structural variant (SV) located within a specific simple repeat region. 
-The columns represent: chromosome ID (0-based), start position of the variant, variant length, REF, ALT, and allele count (AC) in different superpopulations.
-
-Results:
-https://github.com/hitbc/HitSV_call_results/blob/main/1KGP_3202_samples_gcSV_v1.0_grch38_VNTR_ANALYSIS.txt.gz
-
-
-Alignment | Coordinates | Strand | Length | Notes 
--- | -- | -- | -- | -- 
-1 | 93,581,722 – 93,582,629 | + | 908 bp | Upstream reference-aligned sequence 
-2 | 93,582,644 – 93,583,540 | − | 898 bp | Inverted segment 
-3 | 93,586,335 – 93,596,411 | + | 10,077 bp | Downstream sequence after a ~2.8kb gap/deletion
